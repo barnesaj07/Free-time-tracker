@@ -6,7 +6,7 @@ set_website_style("water")
 set_website_title("Free time tracker)
 set_site_information(author="Aiden Barnes",
                      description="Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day",
-                     sources="The drafter documentation website and drafter images on google",
+                     sources="The drafter documentation website",
                      planning="https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?tab=t.0",
                      link="https://barnesaj07.github.io/Free-time-tracker/"
                     )
