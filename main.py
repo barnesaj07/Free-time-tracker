@@ -3,26 +3,6 @@ from dataclasses import dataclass
 from drafter import *
 
 set_website_style("water")
-
-@dataclass
-class State:
-    """
-    Represents the state of the free time tracker application.
-
-    Attributes:
-        is_week (bool): Whether the user is tracking free time for a week.
-        is_weekday (bool): Whether the user is tracking free time for the weekdays.
-        is_day (bool): Whether the user is tracking free time for a day.
-        busy_time (float): The total time spent on tasks.
-        week_time (list[Day]): A list of Day items that represent the 7 days of the week.
-    """
-    is_week:bool
-    is_weekday: bool
-    is_day: bool
-    busy_time:float
-    week_time: list[Day]
-
-    
 @dataclass
 class Day:
     """
@@ -56,6 +36,26 @@ class Day:
     exercise:float
     study:float
     other:float
+@dataclass
+class State:
+    """
+    Represents the state of the free time tracker application.
+
+    Attributes:
+        is_week (bool): Whether the user is tracking free time for a week.
+        is_weekday (bool): Whether the user is tracking free time for the weekdays.
+        is_day (bool): Whether the user is tracking free time for a day.
+        busy_time (float): The total time spent on tasks.
+        week_time (list[Day]): A list of Day items that represent the 7 days of the week.
+    """
+    is_week:bool
+    is_weekday: bool
+    is_day: bool
+    busy_time:float
+    week_time: list[Day]
+
+    
+
 place_holder=Day("",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0)   
 @route
 def index(state:State)->Page:
