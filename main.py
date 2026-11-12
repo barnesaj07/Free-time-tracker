@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from drafter import *
 
 set_website_style("water")
-set_website_title("Free time tracker)
+set_website_title("Free time tracker")
 set_site_information(author="Aiden Barnes",
                      description="Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day",
                      sources="The drafter documentation website",
