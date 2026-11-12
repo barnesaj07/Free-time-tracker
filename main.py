@@ -11,7 +11,7 @@ set_site_information(author="Aiden Barnes",
                      planning="https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing", 
                      links="https://barnesaj07.github.io/Free-time-tracker/"
                     )
-set_website_frame(False)
+set_website_framed(False)
    
     
 @dataclass
