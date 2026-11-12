@@ -2,6 +2,7 @@ from bakery import assert_equal
 from dataclasses import dataclass
 from drafter import *
 
+hide_debug_information()
 set_website_style("water")
 set_website_title("Free time tracker")
 set_site_information(author="Aiden Barnes",
@@ -10,7 +11,7 @@ set_site_information(author="Aiden Barnes",
                      planning=["https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing", "https://docs.google.com/document/d/1yOqP-8_TI6w-DdZMSAkkSecCFEsnKct0xN5w5sjXZqo/edit?usp=sharing"] 
                      links="https://barnesaj07.github.io/Free-time-tracker/"
                     )
-    
+set_website_frame(False)
    
     
 @dataclass
