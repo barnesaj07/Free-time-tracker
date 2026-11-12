@@ -8,7 +8,7 @@ set_website_title("Free time tracker")
 set_site_information(author="Aiden Barnes",
                      description="Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day",
                      sources="The drafter documentation website for the coding. ChatGPT for the initial brainstorming",  
-                     planning=["https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing", "https://docs.google.com/document/d/1yOqP-8_TI6w-DdZMSAkkSecCFEsnKct0xN5w5sjXZqo/edit?usp=sharing"] 
+                     planning="https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing" 
                      links="https://barnesaj07.github.io/Free-time-tracker/"
                     )
 set_website_frame(False)
