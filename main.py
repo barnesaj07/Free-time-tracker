@@ -515,7 +515,9 @@ def save_day(state:State,select_day:str,sleep:str,eating:str,personal_care:str,
                                          commuting:str,exercise:str,study:str,other:str)->Page:
     '''
         Saves the current day/task that was inputed in the week_time state as a Day object.
-        Saves based on correponding day in week_time state.
+        Saves based on correponding day in week_time state. Try and except checks to see
+        if the given code displays an error. If it throws the error it will prompt the user
+        to input a new day. If theres no error the code will continue as expected
 
         Args:
             state (State): The current state the file is in.
@@ -537,27 +539,34 @@ def save_day(state:State,select_day:str,sleep:str,eating:str,personal_care:str,
     '''
     if (not sleep or not eating or not personal_care or not chores
         or not social or not work or not classes or not club
-        or not commuting or not exercise or not study or not other):
+        or not commuting or not exercise or not study or not other ):
         return get_activity_time(state)
-    
-    task =Day(select_day,float(sleep),float(eating),float(personal_care),
+    #This will try to set the task to a proper Day
+    try: 
+        task =Day(select_day,float(sleep),float(eating),float(personal_care),
                                          float(chores),float(social),float(work),float(classes),float(club),
                                          float(commuting),float(exercise),float(study),float(other))
-    if select_day == "Sunday":
-        state.week_time[0] = task
-    if select_day == "Monday":
-        state.week_time[1] = task
-    if select_day == "Tuesday":
-        state.week_time[2] = task
-    if select_day == "Wednesday":
-        state.week_time[3] = task
-    if select_day == "Thursday":
-        state.week_time[4] = task
-    if select_day == "Friday":
-        state.week_time[5] = task
-    if select_day == "Saturday":
-        state.week_time[6] = task
-    return calculate_free_time(state)
+    #If one of the strings can't turn into a float it will prompt the user again and not save the day
+    except ValueError:
+        return calculate_free_time(state)
+    #If it passes the code continues as intended
+    else:
+        
+        if select_day == "Sunday":
+            state.week_time[0] = task
+        if select_day == "Monday":
+            state.week_time[1] = task
+        if select_day == "Tuesday":
+            state.week_time[2] = task
+        if select_day == "Wednesday":
+            state.week_time[3] = task
+        if select_day == "Thursday":
+            state.week_time[4] = task
+        if select_day == "Friday":
+            state.week_time[5] = task
+        if select_day == "Saturday":
+            state.week_time[6] = task
+        return calculate_free_time(state)
 
 
 assert_equal(save_day(State(False,False,True,0.0,[place_holder,place_holder,
