@@ -537,10 +537,6 @@ def save_day(state:State,select_day:str,sleep:str,eating:str,personal_care:str,
         Returns:
             Page: Returns the calculate_free_time page.
     '''
-    if (not sleep or not eating or not personal_care or not chores
-        or not social or not work or not classes or not club
-        or not commuting or not exercise or not study or not other ):
-        return get_activity_time(state)
     #This will try to set the task to a proper Day
     try: 
         task =Day(select_day,float(sleep),float(eating),float(personal_care),
