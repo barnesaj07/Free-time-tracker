@@ -548,7 +548,7 @@ def save_day(state:State,select_day:str,sleep:str,eating:str,personal_care:str,
                                          float(commuting),float(exercise),float(study),float(other))
     #If one of the strings can't turn into a float it will prompt the user again and not save the day
     except ValueError:
-        return calculate_free_time(state)
+        return get_activity_time(state)
     #If it passes the code continues as intended
     else:
         
