@@ -112,7 +112,7 @@ def about(state:State)->Page:
     Returns:
             Page: Returns a page with the information found in --about. This page also has a back button.
   '''
-  return get_site_information()
+  return Page(state,get_site_information())
   assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
                                         place_holder,place_holder,place_holder])),get_site_information())
   assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
