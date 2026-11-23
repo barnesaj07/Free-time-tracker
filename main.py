@@ -77,7 +77,8 @@ def index(state:State)->Page:
         Args:
             state (State): The current state the file is in.
         Returns:
-            Page: Returns a page with three buttons for input and a title.
+            Page: Returns a page with three buttons for input about the timeframe and a title.
+            One more button is added to go to the about page.
     '''
     return Page(state,
                 [
