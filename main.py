@@ -114,11 +114,17 @@ def about(state:State)->Page:
   '''
   return Page(state,get_site_information())
   assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),get_site_information())
+                                        place_holder,place_holder,place_holder])), 
+               State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
+                                        place_holder,place_holder,place_holder]), get_site_information())
   assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),get_site_information())
+                                        place_holder,place_holder,place_holder])),
+               State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
+                                        place_holder,place_holder,place_holder]), get_site_information())
   assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),get_site_information())
+                                        place_holder,place_holder,place_holder])),
+               State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
+                                        place_holder,place_holder,place_holder]), get_site_information())
   
 @route
 def get_activity_time(state:State)->Page:
