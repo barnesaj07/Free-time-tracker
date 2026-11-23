@@ -112,60 +112,13 @@ def about(state:State)->Page:
     Returns:
             Page: Returns a page with the information found in --about. This page also has a back button.
   '''
-  return Page(state,
-              [
-                "Author: Aiden Barnes\n",
-                "Description: Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day\n",
-                "Sources: The drafter documentation website for the coding. ChatGPT for the initial brainstorming\n",  
-                "Planning: https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing \n" 
-                "https://chatgpt.com/ \n"
-                "https://docs.google.com/document/d/1yOqP-8_TI6w-DdZMSAkkSecCFEsnKct0xN5w5sjXZqo/edit?usp=sharing\n", 
-                "links=https://barnesaj07.github.io/Free-time-tracker/",
-                Button("Home","index")
-              ],
-             )
+  return get_site_information()
   assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),Page(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder]),
-              [
-                "Author: Aiden Barnes\n",
-                "Description: Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day\n",
-                "Sources: The drafter documentation website for the coding. ChatGPT for the initial brainstorming\n",  
-                "Planning: https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing \n" 
-                "https://chatgpt.com/ \n"
-                "https://docs.google.com/document/d/1yOqP-8_TI6w-DdZMSAkkSecCFEsnKct0xN5w5sjXZqo/edit?usp=sharing\n", 
-                "links=https://barnesaj07.github.io/Free-time-tracker/",
-                Button("Home","index")
-              ],
-             ))
-  assert_equal(about(State(True,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),Page(State(True,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder]),
-              [
-                "Author: Aiden Barnes\n",
-                "Description: Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day\n",
-                "Sources: The drafter documentation website for the coding. ChatGPT for the initial brainstorming\n",  
-                "Planning: https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing \n" 
-                "https://chatgpt.com/ \n"
-                "https://docs.google.com/document/d/1yOqP-8_TI6w-DdZMSAkkSecCFEsnKct0xN5w5sjXZqo/edit?usp=sharing\n", 
-                "links=https://barnesaj07.github.io/Free-time-tracker/",
-                Button("Home","index")
-              ],
-             ))
-  assert_equal(about(State(False,True,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),Page(State(False,True,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder]),
-              [
-                "Author: Aiden Barnes\n",
-                "Description: Takes user input and calculates their available freetime. They can select the time frame as a week,weekdays, or one day\n",
-                "Sources: The drafter documentation website for the coding. ChatGPT for the initial brainstorming\n",  
-                "Planning: https://docs.google.com/document/d/1aNg5OmOhiuRS4wbjnKiMoYYXGoxC-HfWyLgY_2smsDs/edit?usp=sharing \n" 
-                "https://chatgpt.com/ \n"
-                "https://docs.google.com/document/d/1yOqP-8_TI6w-DdZMSAkkSecCFEsnKct0xN5w5sjXZqo/edit?usp=sharing\n", 
-                "links=https://barnesaj07.github.io/Free-time-tracker/",
-                Button("Home","index")
-              ],
-             ))
+                                        place_holder,place_holder,place_holder])),get_site_information())
+  assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
+                                        place_holder,place_holder,place_holder])),get_site_information())
+  assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
+                                        place_holder,place_holder,place_holder])),get_site_information())
   
 @route
 def get_activity_time(state:State)->Page:
