@@ -85,7 +85,7 @@ def index(state:State)->Page:
                     Button("One Day","one_day"),
                     Button("Weekdays","weekdays"),
                     Button("Whole Week","whole_week"),"\n\n",
-                    Button("About","about")
+                    Button("About","https://barnesaj07.github.io/Free-time-tracker/?route=--about")
                 ],
             )
 assert_equal(index(State(False,False,False,0.0,
@@ -102,30 +102,6 @@ assert_equal(index(State(False,False,False,0.0,
                 ]
                                                                    )
              )
-@route
-def about(state:State)->Page:
-  '''
-    This is the about section of the website that can be accessed by a button instead of --about
-    
-    Args:
-            state (State): The current state the file is in.
-    Returns:
-            Page: Returns a page with the information found in --about. This page also has a back button.
-  '''
-  return Page(state,get_site_information())
-  assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])), 
-               State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder]), get_site_information())
-  assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),
-               State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder]), get_site_information())
-  assert_equal(about(State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder])),
-               State(False,False,False,0.0,[place_holder,place_holder,place_holder,place_holder,
-                                        place_holder,place_holder,place_holder]), get_site_information())
-  
 @route
 def get_activity_time(state:State)->Page:
     '''
