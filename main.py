@@ -50,7 +50,7 @@ class Day:
 @dataclass
 class State:
     """
-    Represents the state of the free time tracker application.
+    Represents the state of the free time tracker application. 
 
     Attributes:
         is_week (bool): Whether the user is tracking free time for a week.
